@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.manimehala.selenium</groupId>
+	<artifactId>CingleVue</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>CingleVue Challenge</name>
+	<description>Code challenge on Selenium</description>
+	<dependencies>
+		<!-- Selenium Dependency -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.45.0</version>
+		</dependency>
+
+		<!-- JUnit Dependency -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<mainClass>com.manimehala.challenge.Application</mainClass>
+					<arguments>
+						<argument>CingleVue</argument> <!--Search Term-->
+						<argument>10</argument> <!--Minimum No. of hits (excluding)-->
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
